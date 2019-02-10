@@ -16,7 +16,7 @@ app.set('port', config.node.port);
 
 app.use(logger('dev'));
 app.use(cookieParser(config.cookie.secret));
-app.use(seesion({
+app.use(session({
   resave: false,
   saveUninitialized: false,
   secret: config.cookie.secret,
