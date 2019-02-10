@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
@@ -45,6 +46,10 @@ router.get('/search/:hashtag', async (req, res, next) => {
       next(error);
     }
   }
+});
+
+router.get('/', (req, res) => {
+  res.render('main', { key: config.node.client_secret });
 });
 
 module.exports = router;

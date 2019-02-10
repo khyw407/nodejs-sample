@@ -1,3 +1,4 @@
+require('dotenv').config();
 const config = require('./lib/config/prjconfig');
 const express = require('express');
 const path = require('path');
